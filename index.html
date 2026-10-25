@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta http-equiv="refresh" content="0; url=quiz.html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>築夢試室｜建築師考古題練習站</title>
+  <meta name="description" content="整理 113、114 年建築師考試考古題，提供年度、科目瀏覽與隨機練習入口。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="回到首頁">
+      <span class="brand-mark">∿</span>
+      <span><strong>築夢試室</strong><small>ARCHITECT EXAM STUDIO</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="#library">題庫</a>
+      <a href="#practice">練習模式</a>
+      <a href="#about">使用說明</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="切換顯示模式">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">PAST PAPERS / PRACTICE BETTER</p>
+        <h1>把每一次作答，<em>變成下一次進步。</em></h1>
+        <p class="lead">兩個年度、六大科目，從官方考古題開始建立你的建築師考試節奏。</p>
+        <div class="hero-actions">
+          <button class="primary-btn" id="randomHero" type="button">開始隨機練習 <span>↗</span></button>
+          <a class="text-link" href="#library">瀏覽完整題庫 ↓</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="blueprint-card"><span>114</span><span>ARCHITECT</span><span>06 SUBJECTS</span></div>
+        <div class="line line-a"></div><div class="line line-b"></div><div class="line line-c"></div>
+        <div class="circle-mark"></div>
+        <div class="hero-note">設計你的<br><b>備考路徑</b></div>
+      </div>
+    </section>
+
+    <section class="stats section-wrap" aria-label="題庫統計">
+      <div><strong>02</strong><span>完整年度</span></div>
+      <div><strong>06</strong><span>核心科目</span></div>
+      <div><strong>20</strong><span>官方 PDF</span></div>
+      <div class="stat-note">資料更新至 114 年<br><small>來源：考選部考畢試題平台</small></div>
+    </section>
+
+    <section class="library section-wrap" id="library">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / LIBRARY</p><h2>你的題庫，<span>隨時就位。</span></h2></div>
+        <p>依年度和科目選擇，打開試題開始練習。<br>測驗科目另附官方標準答案。</p>
+      </div>
+      <div class="filters">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="搜尋科目，例如：建築結構" aria-label="搜尋科目"></label>
+        <div class="year-tabs" role="tablist" aria-label="年度篩選">
+          <button class="year-tab active" data-year="all" type="button">全部</button>
+          <button class="year-tab" data-year="114" type="button">114 年</button>
+          <button class="year-tab" data-year="113" type="button">113 年</button>
+        </div>
+      </div>
+      <div id="libraryGrid" class="library-grid"></div>
+      <p id="emptyState" class="empty-state" hidden>找不到符合條件的科目，試試其他關鍵字。</p>
+    </section>
+
+    <section class="practice section-wrap" id="practice">
+      <div class="practice-panel">
+        <div class="practice-content"><p class="eyebrow">02 / PRACTICE MODE</p><h2>今天，<br><em>練哪一科？</em></h2><p>不用想太久。讓系統替你從題庫挑一份試題，專注完成一回。</p><button class="primary-btn" id="randomPractice" type="button">幫我選一份試題 <span>✦</span></button></div>
+        <div class="practice-orbit" aria-hidden="true"><div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-dot dot-one"></div><div class="orbit-dot dot-two"></div><div class="orbit-core">GO<br><small>FOCUS</small></div></div>
+      </div>
+      <div id="practiceResult" class="practice-result" hidden></div>
+    </section>
+
+    <section class="about section-wrap" id="about">
+      <div><p class="eyebrow">03 / HOW TO USE</p><h2>簡單三步，<br><span>進入狀態。</span></h2></div>
+      <div class="steps"><div><b>01</b><h3>挑年度</h3><p>先從最近年度開始，熟悉命題風格與題型。</p></div><div><b>02</b><h3>選科目</h3><p>依照當週讀書計畫，開啟對應試題 PDF。</p></div><div><b>03</b><h3>計時作答</h3><p>完成後再打開答案 PDF，整理錯題與觀念。</p></div></div>
+    </section>
+  </main>
+  <footer class="footer section-wrap"><span>築夢試室 / ARCHITECT EXAM STUDIO</span><span>Local study tool · 113—114</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
